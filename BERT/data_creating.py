@@ -74,14 +74,13 @@ def normalized_word(aw):
 def main():
     
     path = 'all_texts_in_utf8_renamed_analyzed'
-    Path("path").mkdir(parents=True, exist_ok=True)
+    #Path(path).mkdir(parents=True, exist_ok=True)
     
     
-    """
     with zipfile.ZipFile('all_texts_in_utf8_renamed_analyzed_mv1.02.zip', 'r') as zip_ref:
         zip_ref.extractall()
-    """
 
+    print('Data unzip')
     #all_file_names = [name for name in os.listdir(path) if '.txt' in name]
 
     all_file_names = [name for name in os.listdir(path) if '.txt' in name][:2200]
@@ -102,6 +101,8 @@ def main():
         output.write(''.join(all_text[math.ceil(len_of_data * 0.25):math.ceil(len_of_data * 0.75)]))
     with open("test.txt", "w") as output:
         output.write(''.join(all_text[math.ceil(len_of_data  * 0.75):]))
+
+    print('Data for model was created')    
 
 if __name__ == "__main__":
     main()
