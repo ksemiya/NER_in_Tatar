@@ -80,7 +80,7 @@ def main():
     with zipfile.ZipFile('all_texts_in_utf8_renamed_analyzed_mv1.02.zip', 'r') as zip_ref:
         zip_ref.extractall()
 
-    print('Data unzip')
+    print('Data unzipped')
     #all_file_names = [name for name in os.listdir(path) if '.txt' in name]
 
     all_file_names = [name for name in os.listdir(path) if '.txt' in name][:2200]
