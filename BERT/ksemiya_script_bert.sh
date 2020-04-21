@@ -1,7 +1,9 @@
 #!/bin/bash
-wget -O all_texts_in_utf8_renamed_analyzed_mv1.02.zip "https://www.dropbox.com/s/akghkvur9akawhn/all_texts_in_utf8_renamed_analyzed_mv1.02.zip?dl=1"
-python3 data_creating.py
-cat train.txt dev.txt test.txt | cut -d " " -f 2 | grep -v "^$"| sort | uniq > labels.txt
+#SBATCH -c 2 -G 1
+#SBATCH --output=result.out
+module load Python/Anaconda_v10.2019 
+conda $env_scripts/deactivate
+conda $env_scripts/activate ksemiya_env_1
 export MAX_LENGTH=128
 export BERT_MODEL=bert-base-multilingual-cased
 export OUTPUT_DIR=germeval-model
