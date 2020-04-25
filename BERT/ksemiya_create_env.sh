@@ -11,3 +11,8 @@ pip install tqdm
 pip install transformers==2.8.0
 pip install seqeval
 pip install tensorboardX
+pip install cupy
+pip install cuda
+pip install cudnn
+pip install chainer
+
