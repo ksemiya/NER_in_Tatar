@@ -1,0 +1,16 @@
+код/all_texts_in_utf8_renamed_analyzed/
+код/layered-bilstm-crf/result/
+Практика/
+VKR/
+
+*.data
+*.log
+*.txt
+
+код/layered-bilstm-crf-master.zip
+
+*.bin
+
+*.zip
+
+*.bin

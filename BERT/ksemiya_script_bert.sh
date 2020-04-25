@@ -1,9 +1,19 @@
 #!/bin/bash
 #SBATCH -c 2 -G 1
 #SBATCH --output=result.out
-module load Python/Anaconda_v10.2019 
-conda $env_scripts/deactivate
-conda $env_scripts/activate ksemiya_env_1
+module load Python/Anaconda_v10.2019
+
+machine_name=$(uname -n)
+if [[ $machine_name == cn-* ]];
+then
+  echo "Executing on HPC cluster, setting up env"
+  env_scripts=/home/pnzhizhin/anaconda3/bin
+
+  module load Python/Anaconda_v10.2019
+  source deactivate
+  source activate ksemiya_env_1
+fi
+
 export MAX_LENGTH=128
 export BERT_MODEL=bert-base-multilingual-cased
 export OUTPUT_DIR=germeval-model
@@ -11,7 +21,7 @@ export BATCH_SIZE=32
 export NUM_EPOCHS=3
 export SAVE_STEPS=750
 export SEED=1
-python3 run_ner.py --data_dir ./ \
+python run_ner.py --data_dir ./ \
 --model_type bert \
 --labels ./labels.txt \
 --model_name_or_path $BERT_MODEL \
@@ -24,3 +34,5 @@ python3 run_ner.py --data_dir ./ \
 --do_train \
 --do_eval \
 --do_predict
+
+
