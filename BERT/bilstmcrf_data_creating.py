@@ -15,7 +15,8 @@ class AnnotatedWord(object):
   """                               
   def __init__(self, word, ann):                             
     self.word = word.strip()                               
-    self.w = self.word.lower()                                  
+    self.w = self.word.lower()
+
     interpretations = ann.strip().split(';')
     # Just use the first interpretation.                   
     tt = interpretations[0].split('+')
@@ -26,7 +27,9 @@ class AnnotatedWord(object):
     self.tt = tt                                         
     stem = tt[0]
     if tt[0] == "Error" or tt[0] == "NR":                  
-        stem = self.w                                      
+        stem = self.w
+    for i in range(32):
+        stem = stem.replace(chr(i), "")                                          
     self.stem = stem
 
 import os                                                      
