@@ -14,8 +14,11 @@ class AnnotatedWord(object):
   stem - the stem of the word (if available), or normalized word (if stem is not available, i.e. when marked with NR)
   """                               
   def __init__(self, word, ann):                             
-    self.word = word.strip()                               
-    self.w = self.word.lower()
+    self.word = word.strip()
+    raw_word = word.strip()
+    for i in range(32):
+        raw_word = raw_word.replace(chr(i), "")                               
+    self.w = raw_word.lower()
 
     interpretations = ann.strip().split(';')
     # Just use the first interpretation.                   
@@ -27,9 +30,7 @@ class AnnotatedWord(object):
     self.tt = tt                                         
     stem = tt[0]
     if tt[0] == "Error" or tt[0] == "NR":                  
-        stem = self.w
-    for i in range(32):
-        stem = stem.replace(chr(i), "")                                          
+        stem = self.w                                          
     self.stem = stem
 
 import os                                                      
