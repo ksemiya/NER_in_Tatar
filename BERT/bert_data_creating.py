@@ -15,7 +15,10 @@ class AnnotatedWord(object):
   """                               
   def __init__(self, word, ann):                             
     self.word = word.strip()                               
-    self.w = self.word.lower()                                  
+    raw_word = self.word
+    for i in range(32):
+        raw_word = raw_word.replace(chr(i))
+    self.w = raw_word                                
     interpretations = ann.strip().split(';')
     # Just use the first interpretation.                   
     tt = interpretations[0].split('+')
@@ -73,22 +76,31 @@ def normalized_word(aw):
 
 def main():
     
-    path = 'all_texts_in_utf8_renamed_analyzed'
-    #Path(path).mkdir(parents=True, exist_ok=True)
+    data_name = 'ttwiki'
+
+    if data_name == 'tugan_tel':
+        path = 'all_texts_in_utf8_renamed_analyzed'
+        #Path(path).mkdir(parents=True, exist_ok=True)
+        
+        
+        with zipfile.ZipFile('all_texts_in_utf8_renamed_analyzed_mv1.02.zip', 'r') as zip_ref:
+            zip_ref.extractall()
+
+        print('Data unzipped')
+        #all_file_names = [name for name in os.listdir(path) if '.txt' in name]
+
+        all_file_names = [name for name in os.listdir(path) if '.txt' in name][:2200]
+        #all_file_names = ['1_4840_0_1.txt']
+
+        all_text = []
+        for FILE in all_file_names:
+            all_text.append(''.join(process_file(path+'/'+FILE, normalized_word)))
+
+    if data_name == 'ttwiki':
+        filename = 'ttwiki-bio-only-entity.txt'
+        with open(filename) as f:                                 
+            all_text = f.readlines()
     
-    
-    with zipfile.ZipFile('all_texts_in_utf8_renamed_analyzed_mv1.02.zip', 'r') as zip_ref:
-        zip_ref.extractall()
-
-    print('Data unzipped')
-    #all_file_names = [name for name in os.listdir(path) if '.txt' in name]
-
-    all_file_names = [name for name in os.listdir(path) if '.txt' in name][:2200]
-    #all_file_names = ['1_4840_0_1.txt']
-
-    all_text = []
-    for FILE in all_file_names:
-        all_text.append(''.join(process_file(path+'/'+FILE, normalized_word)))
 
     len_of_data = len(all_text)
 
