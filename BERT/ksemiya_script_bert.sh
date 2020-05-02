@@ -1,18 +1,10 @@
 #!/bin/bash
 #SBATCH -c 2 -G 1
-#SBATCH --output=result.out
+#SBATCH --output=result_2.out
 module load Python/Anaconda_v10.2019
 
-machine_name=$(uname -n)
-if [[ $machine_name == cn-* ]];
-then
-  echo "Executing on HPC cluster, setting up env"
-  env_scripts=/home/pnzhizhin/anaconda3/bin
-
-  module load Python/Anaconda_v10.2019
-  source deactivate
-  source activate ksemiya_env_1
-fi
+source deactivate
+source activate ksemiya_env_1
 
 export MAX_LENGTH=128
 export BERT_MODEL=bert-base-multilingual-cased
