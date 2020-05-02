@@ -99,7 +99,8 @@ def main():
     if data_name == 'ttwiki':
         filename = 'ttwiki-bio-only-entity.txt'
         with open(filename) as f:                                 
-            all_text = f.readlines()
+            lines = f.readlines()
+        all_text = ''.join(lines)
     
 
     len_of_data = len(all_text)
@@ -107,12 +108,16 @@ def main():
     #with open("data.tmp", "w") as output:
     #    output.write(''.join(all_text[:math.ceil(len_of_data * 0.25)]))
 
+    left_sep = math.ceil(len_of_data * 0.25) + all_text[math.ceil(len_of_data * 0.25):].find('\n\n') + 2
+    right_sep = math.ceil(len_of_data * 0.75) + all_text[math.ceil(len_of_data * 0.75):].find('\n\n') + 2
+
+
     with open("dev.txt", "w") as output:
-        output.write(''.join(all_text[:math.ceil(len_of_data * 0.25)]))
+        output.write(''.join(all_text[:left_sep]))
     with open("train.txt", "w") as output:
-        output.write(''.join(all_text[math.ceil(len_of_data * 0.25):math.ceil(len_of_data * 0.75)]))
+        output.write(''.join(all_text[left_sep:right_sep]))
     with open("test.txt", "w") as output:
-        output.write(''.join(all_text[math.ceil(len_of_data  * 0.75):]))
+        output.write(''.join(all_text[right_sep:]))
 
     print('Data for model was created')    
 
