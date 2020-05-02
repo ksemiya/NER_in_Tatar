@@ -1,10 +1,15 @@
 #!/bin/bash
 #SBATCH -c 2 -G 1
-#SBATCH --output=result_2.out
+#SBATCH --output=result_bilstm.out
 module load Python/Anaconda_v10.2019
 
+#module load Python/Anaconda_v10.2019
+
 source deactivate
-source activate ksemiya_env_1
+echo "I'm here deactivating"
+source activate /home/pnzhizhin/.conda/envs/ksemiya_env_1
+
+echo $(which python)
 
 export MAX_LENGTH=128
 export BERT_MODEL=bert-base-multilingual-cased
@@ -13,7 +18,7 @@ export BATCH_SIZE=32
 export NUM_EPOCHS=3
 export SAVE_STEPS=750
 export SEED=1
-python run_ner.py --data_dir ./ \
+python3 run_ner.py --data_dir ./ \
 --model_type bert \
 --labels ./labels.txt \
 --model_name_or_path $BERT_MODEL \
