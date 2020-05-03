@@ -17,7 +17,7 @@ class AnnotatedWord(object):
     self.word = word.strip()                               
     raw_word = self.word
     for i in range(32):
-        raw_word = raw_word.replace(chr(i))
+        raw_word = raw_word.replace(chr(i), '')
     self.w = raw_word                                
     interpretations = ann.strip().split(';')
     # Just use the first interpretation.                   
@@ -92,24 +92,28 @@ def main():
         all_file_names = [name for name in os.listdir(path) if '.txt' in name][:2200]
         #all_file_names = ['1_4840_0_1.txt']
 
-        all_text = []
+        all_text = ''
         for FILE in all_file_names:
-            all_text.append(''.join(process_file(path+'/'+FILE, normalized_word)))
+            all_text += ''.join(process_file(path+'/'+FILE, normalized_word))
+
 
     if data_name == 'ttwiki':
         filename = 'ttwiki-bio-only-entity.txt'
         with open(filename) as f:                                 
             lines = f.readlines()
         all_text = ''.join(lines)
-    
 
     len_of_data = len(all_text)
+    left_sep = math.ceil(len_of_data * 0.25) + all_text[math.ceil(len_of_data * 0.25):].find('\n\n') + 2
+    right_sep = math.ceil(len_of_data * 0.75) + all_text[math.ceil(len_of_data * 0.75):].find('\n\n') + 2
+
+
+    
 
     #with open("data.tmp", "w") as output:
     #    output.write(''.join(all_text[:math.ceil(len_of_data * 0.25)]))
 
-    left_sep = math.ceil(len_of_data * 0.25) + all_text[math.ceil(len_of_data * 0.25):].find('\n\n') + 2
-    right_sep = math.ceil(len_of_data * 0.75) + all_text[math.ceil(len_of_data * 0.75):].find('\n\n') + 2
+    
 
 
     with open("dev.txt", "w") as output:
