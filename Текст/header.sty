@@ -91,3 +91,37 @@
 \fancyhead[LO]{\leftmark}
 \fancyhead[RE]{\rightmark}
 
+\usepackage{hyperref}
+
+ % Цвета для гиперссылок
+\usepackage{xcolor}
+\usepackage{floatflt}
+\usepackage{ulem}
+
+% hack for indentation
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{graphicx}
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\usepackage{caption}
+% \captionsetup[table]{position=t,justification=raggedleft,slc=off}
+
+% hack for список литературы
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*}{\section}{}{}
+\fancyhf{}
+\fancyhead[R]{\head}
+\fancyhead[L]{\thepage}
+
+\def\baselinestretch{1}
+
+\makeatletter
+\let\newtitle\@title
+\let\newdate\@date
+\makeatother
+
+\linespread{1.3}
