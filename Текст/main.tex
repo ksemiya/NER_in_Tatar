@@ -1,7 +1,11 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{header}
 \usepackage{enumitem}
-
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
 
 \begin{document}
 \selectlanguage{russian}
@@ -10,9 +14,20 @@
     \pagestyle{empty}
     \tableofcontents
     \pagestyle{plain}
-    
-    TODO АННОТАЦИЯ И КЛЮЧЕВЫЕ СЛОВА
-    
+\selectlanguage{english}
+\begin{abstract}
+In this work, I try to solve the problem of Tatar named entity recognition, which connected with problems of NER in low resourced languages. I present a list with named entities and two automatically annotated corpora from Tugan Tel and Wikipedia. Corpora contain labels such as PER, LOC, ORG and MISC. I train a BiLSTM-CRF and BERT models, which provide 0.47 average F-score. 
+\end{abstract} \hspace{10pt}
+
+%TC:ignore
+\keywords{Named Entity Recognition, NER, tatar language, low resourced languages}
+%TC:endignore
+\selectlanguage{russian}
+
+\begin{abstract}
+В данной работе я попыталась решить задачу распознавания именованных сущностей в татарском языке, который является языком с малыми ресурсами и для которого ранее не решалась данная проблема. По результатам работы я предоставляю список именованных сущностей и два размеченных с помощью алгоритма корпуса на основе корпуса Туган Тел и Википедии. Корпусы содержат теги PER, LOC, ORG и MISC. Я обучила модели BiLSTM-CRF и BERT, которые показали средний результат метрики f-score 0.47.
+\end{abstract} \hspace{10pt}
+
     \input{Introduction}
     \input{Literature_review}
     \input{main_part}

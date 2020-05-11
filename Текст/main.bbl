@@ -1,0 +1,106 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{Nevzorova}
+\selectlanguageifdefined{russian}
+Olga~Nevzorova~Damir~Mukhamedshin, Galieva~Alfiya. Named Entity Recognition in
+  Tatar: Corpus-Based Algorithm~// semanticscholar.
+\newblock 2018.
+
+\bibitem{delta}
+\selectlanguageifdefined{russian}
+{DELTA: A DEep learning based Language Technology plAtform}~/ ~{Han}, ~Kun,
+  ~{Chen} {[и~др.]}~// arXiv e-prints.
+\newblock 2019. URL:  https://arxiv.org/abs/1908.01853.
+
+\bibitem{CNN_top_2_SOTA}
+\selectlanguageifdefined{russian}
+{Cloze-driven Pretraining of Self-attention Networks}~/ Alexei~Baevski,
+  Sergey~Edunov, Yinhan~Liu {[и~др.]}~// arXiv e-prints.
+\newblock 2019. URL:  https://arxiv.org/abs/1903.07785v1.
+
+\bibitem{Liu:19}
+\selectlanguageifdefined{russian}
+GCDT: A Global Context Enhanced Deep Transition Architecture for Sequence
+  Labeling~/ Yijin~Liu, Fandong~Meng, Jinchao~Zhang {[и~др.]}~// Proceedings
+  of the 57th Annual Meeting of the Association for Computational Linguistics.
+\newblock 2019.
+
+\bibitem{jiang-etal-2019-improved}
+\selectlanguageifdefined{russian}
+Improved Differentiable Architecture Search for Language Modeling and Named
+  Entity Recognition~/ Yufan~Jiang, Chi~Hu, Tong~Xiao {[и~др.]}~//
+  Proceedings of the 2019 Conference on Empirical Methods in Natural Language
+  Processing and the 9th International Joint Conference on Natural Language
+  Processing (EMNLP-IJCNLP).
+\newblock Hong Kong, China: Association for Computational Linguistics, 2019.
+  nov.
+\newblock {С.}~3585--3590. URL:  https://www.aclweb.org/anthology/D19-1367.
+
+\bibitem{strakova-etal-2019-neural}
+\selectlanguageifdefined{russian}
+Strakov{\'a}~Jana, Straka~Milan, Hajic~Jan. Neural Architectures for Nested
+  {NER} through Linearization~// Proceedings of the 57th Annual Meeting of the
+  Association for Computational Linguistics.
+\newblock Florence, Italy: Association for Computational Linguistics, 2019.
+  jul.
+\newblock {С.}~5326--5331. URL:  https://www.aclweb.org/anthology/P19-1527.
+
+\bibitem{cotterell-duh-2017-low}
+\selectlanguageifdefined{russian}
+Cotterell~Ryan, Duh~Kevin. Low-Resource Named Entity Recognition with
+  Cross-lingual, Character-Level Neural Conditional Random Fields~//
+  Proceedings of the Eighth International Joint Conference on Natural Language
+  Processing (Volume 2: Short Papers).
+\newblock Taipei, Taiwan: Asian Federation of Natural Language Processing,
+  2017.  nov.
+\newblock {С.}~91--96. URL:  https://www.aclweb.org/anthology/I17-2016.
+
+\bibitem{ju-etal-2018-neural}
+\selectlanguageifdefined{russian}
+Ju~Meizhi, Miwa~Makoto, Ananiadou~Sophia. A Neural Layered Model for Nested
+  Named Entity Recognition~// Proceedings of the 2018 Conference of the North
+  {A}merican Chapter of the Association for Computational Linguistics: Human
+  Language Technologies, Volume 1 (Long Papers).
+\newblock New Orleans, Louisiana: Association for Computational Linguistics,
+  2018.  jun.
+\newblock {С.}~1446--1459. URL:  https://www.aclweb.org/anthology/N18-1131.
+
+\bibitem{DBLP:journals/corr/abs-1810-04805}
+\selectlanguageifdefined{russian}
+{BERT:} Pre-training of Deep Bidirectional Transformers for Language
+  Understanding~/ Jacob~Devlin, Ming{-}Wei~Chang, Kenton~Lee {[и~др.]}~//
+  CoRR.
+\newblock 2018.
+\newblock Т. abs/1810.04805. URL:  http://arxiv.org/abs/1810.04805.
+
+\bibitem{Wolf2019HuggingFacesTS}
+\selectlanguageifdefined{russian}
+HuggingFace's Transformers: State-of-the-art Natural Language Processing~/
+  Thomas~Wolf, Lysandre~Debut, Victor~Sanh {[и~др.]}~// ArXiv.
+\newblock 2019.
+\newblock Т. abs/1910.03771.
+
+\bibitem{DBLP:journals/corr/cmp-lg-9505040}
+\selectlanguageifdefined{russian}
+Ramshaw~Lance~A., Marcus~Mitchell~P. Text Chunking using Transformation-Based
+  Learning~// CoRR.
+\newblock 1995.
+\newblock Т. cmp-lg/9505040. URL:  http://arxiv.org/abs/cmp-lg/9505040.
+
+\bibitem{tugan_tel}
+\selectlanguageifdefined{russian}
+Nevzorova~O.~Mukhamedshin~D., R.~Gataullin. Developing Corpus Management
+  System: Architecture of System and Database~// The Steering Committee of The
+  World Congress in Computer Science, Computer Engineering and Applied
+  Computing (WorldComp)~/ The Tatarstan Academy of Sciences, Kazan, Russia.
+\newblock 2017.
+\newblock {С.}~108--122.
+
+\end{thebibliography}
