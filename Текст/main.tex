@@ -2,6 +2,7 @@
 \usepackage{header}
 \usepackage{enumitem}
 
+
 \begin{document}
 \selectlanguage{russian}
 
@@ -10,19 +11,16 @@
     \tableofcontents
     \pagestyle{plain}
     
+    TODO АННОТАЦИЯ И КЛЮЧЕВЫЕ СЛОВА
     
     \input{Introduction}
     \input{Literature_review}
     \input{main_part}
     \input{Conclusion}
+    
+    \addcontentsline{toc}{chapter}{Список литературы}
+    \bibliographystyle{utf8gost705u}  %% стилевой файл для оформления по ГОСТу
+    \bibliography{biblio}     %% имя библиографической базы (bib-файла)
 
-    % \setcounter{theorem}{0}
-    % \setcounter{definition}{0}
-    % \pagestyle{empty}
-    % \chapter{Допополнительные главы теории вероятностей}
-    % \pagestyle{fancy}
-    % \input{lecture_raidboss_01_24.01.2017}
-    % \input{lecture_raidboss_02_31.01.2017}
-    % \input{lecture_raidboss_03_07.02.2017}
-    % \input{lecture_raidboss_04_14.02.2017}
+
 \end{document}

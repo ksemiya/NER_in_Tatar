@@ -2,7 +2,8 @@
 \usepackage{cmap}                   % Поиск по кириллице
 \usepackage{mathtext}               % Кириллица в формулах
 \usepackage[T1,T2A]{fontenc}        % Кодировки шрифтов
-\usepackage[utf8]{inputenc}         % Кодировка текста
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}         % Кодировка текста
 \usepackage[english,russian]{babel} % Подключение поддержки языков
 
 %% Настройка размеров полей
@@ -11,6 +12,7 @@
 \usepackage{xparse}
 
 %% Математические пакеты
+
 \usepackage{mathtools}              % Тот же amsmath, только с некоторыми поправками
 \usepackage{amssymb}                % Математические символы
 \usepackage{amsthm}                 % Оформление теорем
@@ -32,7 +34,7 @@
 
 %% Графика
 \usepackage[pdftex]{graphicx}       % Вставка картинок
-\graphicspath{{images/}}            % Стандартный путь к картинкам
+\graphicspath{{pics/}}            % Стандартный путь к картинкам
 \usepackage{tikz}                   % Рисование всего
 \usepackage{pgfplots}               % Графики
 %\pgfplotsset{compat=1.12}
@@ -56,7 +58,7 @@
 \usepackage{xifthen}                                    % if-else в определениях комманд
 
 %% Прочее
-\mathtoolsset{showonlyrefs=true}        % Показывать номера только у тех формул,
+%\mathtoolsset{showonlyrefs=true}        % Показывать номера только у тех формул,
                                         % на которые есть \eqref{} в тексте.
 \renewcommand{\headrulewidth}{1.8pt}    % Изменяем размер верхнего отступа колонтитула
 \renewcommand{\footrulewidth}{0.0pt}    % Изменяем размер нижнего отступа колонтитула
@@ -108,20 +110,9 @@
 \counterwithin{table}{section}
 
 \usepackage{caption}
-% \captionsetup[table]{position=t,justification=raggedleft,slc=off}
 
-% hack for список литературы
-\usepackage{etoolbox}
-\patchcmd{\thebibliography}{\section*}{\section}{}{}
-\fancyhf{}
-\fancyhead[R]{\head}
-\fancyhead[L]{\thepage}
 
-\def\baselinestretch{1}
 
-\makeatletter
-\let\newtitle\@title
-\let\newdate\@date
-\makeatother
 
-\linespread{1.3}
+
+%\usepackage[usenames]{color}
