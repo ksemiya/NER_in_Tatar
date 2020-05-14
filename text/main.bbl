@@ -7,11 +7,35 @@
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
 \ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
 
+\bibitem{first_NER}
+\selectlanguageifdefined{russian}
+Grishman~Ralph, Sundheim~Beth. Message Understanding Conference-6: A Brief
+  History~// Proceedings of the 16th Conference on Computational Linguistics -
+  Volume 1.
+\newblock COLING ’96.
+\newblock USA: Association for Computational Linguistics, 1996.
+\newblock {с.}~466–471. URL:  https://doi.org/10.3115/992628.992709.
+
+\bibitem{DBLP:journals/corr/abs-1812-09449}
+\selectlanguageifdefined{russian}
+A Survey on Deep Learning for Named Entity Recognition~/ Jing~Li, Aixin~Sun,
+  Jianglei~Han {[и~др.]}~// CoRR.
+\newblock 2018.
+\newblock Т. abs/1812.09449. URL:  http://arxiv.org/abs/1812.09449.
+
 \bibitem{Nevzorova}
 \selectlanguageifdefined{russian}
 Olga~Nevzorova~Damir~Mukhamedshin, Galieva~Alfiya. Named Entity Recognition in
   Tatar: Corpus-Based Algorithm~// semanticscholar.
 \newblock 2018.
+
+\bibitem{tjong-kim-sang-de-meulder-2003-introduction}
+\selectlanguageifdefined{russian}
+Tjong Kim~Sang~Erik~F., De~Meulder~Fien. Introduction to the {C}o{NLL}-2003
+  Shared Task: Language-Independent Named Entity Recognition~// Proceedings of
+  the Seventh Conference on Natural Language Learning at {HLT}-{NAACL} 2003.
+\newblock 2003.
+\newblock {С.}~142--147. URL:  https://www.aclweb.org/anthology/W03-0419.
 
 \bibitem{delta}
 \selectlanguageifdefined{russian}
@@ -72,6 +96,21 @@ Ju~Meizhi, Miwa~Makoto, Ananiadou~Sophia. A Neural Layered Model for Nested
   2018.  jun.
 \newblock {С.}~1446--1459. URL:  https://www.aclweb.org/anthology/N18-1131.
 
+\bibitem{DBLP:journals/corr/GreffSKSS15}
+\selectlanguageifdefined{russian}
+{LSTM:} {A} Search Space Odyssey~/ Klaus~Greff, Rupesh~Kumar~Srivastava,
+  Jan~Koutn{\'{\i}}k {[и~др.]}~// CoRR.
+\newblock 2015.
+\newblock Т. abs/1503.04069. URL:  http://arxiv.org/abs/1503.04069.
+
+\bibitem{CRF}
+\selectlanguageifdefined{russian}
+Lafferty~John, Mccallum~Andrew, Pereira~Fernando. Conditional Random Fields:
+  Probabilistic Models for Segmenting and Labeling Sequence Data~// Proceedings
+  of the Eighteenth International Conference on Machine Learning.
+\newblock 2001.  01.
+\newblock {С.}~282--289.
+
 \bibitem{DBLP:journals/corr/abs-1810-04805}
 \selectlanguageifdefined{russian}
 {BERT:} Pre-training of Deep Bidirectional Transformers for Language
@@ -93,6 +132,14 @@ Ramshaw~Lance~A., Marcus~Mitchell~P. Text Chunking using Transformation-Based
   Learning~// CoRR.
 \newblock 1995.
 \newblock Т. cmp-lg/9505040. URL:  http://arxiv.org/abs/cmp-lg/9505040.
+
+\bibitem{marsh-perzanowski-1998-muc}
+\selectlanguageifdefined{russian}
+Marsh~Elaine, Perzanowski~Dennis. {MUC}-7 Evaluation of {IE} Technology:
+  Overview of Results~// Seventh Message Understanding Conference ({MUC}-7):
+  Proceedings of a Conference Held in Fairfax, Virginia, {A}pril 29 - May 1,
+  1998.
+\newblock 1998. URL:  https://www.aclweb.org/anthology/M98-1002.
 
 \bibitem{tugan_tel}
 \selectlanguageifdefined{russian}
