@@ -395,7 +395,7 @@ class Model(ModelBase):
 
 class Evaluator(extensions.Evaluator):
     def __init__(self, iterator, target, device):
-        super(Evaluator, self).__init__(iterator=iterator, target=target, device=device)
+        super(Evaluator, self).__init__(iterator=iterator, target=target, device=-1)
 
         if device['main'] >= 0:
             self.xp = cuda.cupy

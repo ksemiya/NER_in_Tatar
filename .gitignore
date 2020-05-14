@@ -1,5 +1,6 @@
 код/all_texts_in_utf8_renamed_analyzed/
 код/layered-bilstm-crf/result/
+код/layered-bilstm-crf/result__1/
 Практика/
 VKR/
 
@@ -22,3 +23,6 @@ VKR/
 Текст/main.toc
 
 *.gz
+
+*.pkl
+

@@ -4,7 +4,7 @@ path_train : ../src/dataset_1/train.data
 path_dev : ../src/dataset_1/dev.data
 path_test : ../src/dataset_1/test.data
 
-path_eval_result : ../evaluation_1/
+path_eval_result : ../evaluation/
 
 # Dataset Format
 tag_scheme : iob
@@ -37,9 +37,9 @@ decay_rate : 0.0001
 # For Training and Tuning
 gpus : {'main': -1}
 mode : 'test'
-mappings_path : ../evaluation_1/mappings.pkl
+mappings_path : ../evaluation/mappings.pkl
 
 # Evaluation
-path_model : ../result_1/model
-script_folder : ../script_1/
-result_folder : ../result_1/
+path_model : ../result/model
+script_folder : ../script/
+result_folder : ../result/

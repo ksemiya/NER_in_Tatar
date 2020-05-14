@@ -179,7 +179,7 @@ def evaluate(model, y_preds, y_reals, raw_xs):
         p_entities = collect_entity(p_tags)
         r_entities = collect_entity(r_tags)
 
-        print(sentence, p_tags, p_entities, sep='\n')
+        #print(sentence, p_tags, p_entities, sep='\n')
 
         file.write('predict|' + '|'.join(
             [','.join([str(entity[0]), str(entity[1]), entity[2]]) for entity in p_entities]) + '\n')

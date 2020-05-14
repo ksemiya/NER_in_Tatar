@@ -78,7 +78,9 @@ def update_tag_scheme(sentences, tag_scheme):
         else:
             index = range(1,len(s[0]))
 
+
         for j in index:
+
             tags = [w[j] for w in s]
             if not iob2(tags):
                 s_str = '\n'.join(' '.join(w) for w in s)
