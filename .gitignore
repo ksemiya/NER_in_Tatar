@@ -1,28 +1,18 @@
-код/all_texts_in_utf8_renamed_analyzed/
-код/layered-bilstm-crf/result/
-код/layered-bilstm-crf/result__1/
-Практика/
-VKR/
+BiLSTMCRF⁩/layered-bilstm-crf⁩/result/
+⁨BiLSTMCRF⁩/layered-bilstm-crf⁩/result__1/
 
 *.data
 *.log
 *.txt
-
-код/layered-bilstm-crf-master.zip
-
 *.bin
-
 *.zip
-
 *.bin
-
-Текст/main.aux
-
-Текст/main.out
-
-Текст/main.toc
-
 *.gz
-
 *.pkl
+
+text/main.aux
+text/main.out
+text/main.toc
+
+
 
