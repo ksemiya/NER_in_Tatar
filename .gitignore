@@ -14,3 +14,5 @@ text/main.aux
 text/main.out
 text/main.toc
 
+
+utils_ner.py

@@ -77,39 +77,54 @@ def normalized_word(aw):
 
 def main():
     
-    path = 'all_texts_in_utf8_renamed_analyzed'
-    #Path(path).mkdir(parents=True, exist_ok=True)
-    
-    
-    with zipfile.ZipFile('all_texts_in_utf8_renamed_analyzed_mv1.02.zip', 'r') as zip_ref:
-        zip_ref.extractall()
 
-    print('Data unzipped')
-    #all_file_names = [name for name in os.listdir(path) if '.txt' in name]
+    data_name = 'ttwiki'
 
-    all_file_names = [name for name in os.listdir(path) if '.txt' in name][:2200]
-    #all_file_names = ['1_4840_0_1.txt']
+    if data_name == 'tugan_tel':
 
-    all_text = []
-    for FILE in all_file_names:
-        all_text.append(''.join(process_file(path+'/'+FILE, normalized_word)))
+        path = 'all_texts_in_utf8_renamed_analyzed'
+        #Path(path).mkdir(parents=True, exist_ok=True)
+        
+        
+        with zipfile.ZipFile('all_texts_in_utf8_renamed_analyzed_mv1.02.zip', 'r') as zip_ref:
+            zip_ref.extractall()
+
+        print('Data unzipped')
+        #all_file_names = [name for name in os.listdir(path) if '.txt' in name]
+
+        all_file_names = [name for name in os.listdir(path) if '.txt' in name][:2200]
+        #all_file_names = ['1_4840_0_1.txt']
+
+        all_text = ''
+        for FILE in all_file_names:
+            all_text += ''.join(process_file(path+'/'+FILE, normalized_word))
+
+    if data_name == 'ttwiki':
+        filename = 'ttwiki-bio-only-entity.txt'
+        with open(filename) as f:                                 
+            lines = f.readlines()
+        lines = [line.replace('\n', '\tO\tO\n') for line in lines]
+        all_text = ''.join(lines)
+        all_text = all_text.replace('\n\tO\tO\n', '\n\n')
 
     len_of_data = len(all_text)
+    left_sep = math.ceil(len_of_data * 0.25) + all_text[math.ceil(len_of_data * 0.25):].find('\n\n') + 2
+    right_sep = math.ceil(len_of_data * 0.75) + all_text[math.ceil(len_of_data * 0.75):].find('\n\n') + 2
+
 
     path_to_save_data = 'layered-bilstm-crf/src/dataset/'
 
     with open(path_to_save_data + "dev.data", "w") as output:
-        output.write(''.join(all_text[:math.ceil(len_of_data * 0.25)]))
+        output.write(all_text[:left_sep])
     with open(path_to_save_data + "train.data", "w") as output:
-        output.write(''.join(all_text[math.ceil(len_of_data * 0.25):math.ceil(len_of_data * 0.75)]))
+        output.write(all_text[left_sep:right_sep])
     with open(path_to_save_data + "test.data", "w") as output:
-        output.write(''.join(all_text[math.ceil(len_of_data  * 0.75):]))
+        output.write(all_text[right_sep:])
 
     print('Data for model was created')    
 
 if __name__ == "__main__":
     main()
-
 
 
 
