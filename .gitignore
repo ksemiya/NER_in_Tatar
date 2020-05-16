@@ -1,5 +1,5 @@
-BiLSTMCRF⁩/layered-bilstm-crf⁩/result/
-⁨BiLSTMCRF⁩/layered-bilstm-crf⁩/result__1/
+BiLSTMCRF⁩/layered-bilstm-crf⁩/result/*
+⁨BiLSTMCRF⁩/layered-bilstm-crf⁩/result__1/*
 
 *.data
 *.log
@@ -13,6 +13,4 @@ BiLSTMCRF⁩/layered-bilstm-crf⁩/result/
 text/main.aux
 text/main.out
 text/main.toc
-
-
 
