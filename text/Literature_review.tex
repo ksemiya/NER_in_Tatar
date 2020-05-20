@@ -7,6 +7,7 @@
 \begin{table}[h]
 \caption{Пример предложения из датасета CoNLL}
 \begin{tabular}{llll}
+Word & POS tag & syntactic chunk tag & named entity tag \\
 U.N. & NNP & I-NP & I-ORG \\
 official & NN & I-NP & O \\
 Ekeus & NNP & I-NP& I-PER \\
@@ -21,7 +22,7 @@ Baghdad & NNP & I-NP & I-LOC \\
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{chart_SOTA}
 \label{fig:chart_SOTA}
-\caption{Лучшие модели для задачи извлечения именованных сущностей на датасете CoNLL 2003}
+\caption{Лучшие модели для задачи извлечения именованных сущностей на датасете CoNLL 2003, f-мера считается по чанкам}
 \end{figure}
 
 Для более глубокого погружения в тему рекомендуется ознакомиться со всеми моделями, приведенными выше; я же проведу краткий обзор моделей, которые были использованы в работе.
