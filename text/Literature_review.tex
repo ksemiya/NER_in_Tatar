@@ -2,7 +2,7 @@
 
 \subsection{Стандартные подходы к извлечению именованных сущностей}
 
-На текущий момент лучшими моделями на классическом датасете CoNLL 2003 \cite{tjong-kim-sang-de-meulder-2003-introduction} \ref{table:example_CoNLL}. по оценке сайта \href{https://paperswithcode.com/sota/named-entity-recognition-ner-on-conll-2003}{paperswithcode.com} является Delta \cite{delta} (модель на основе BERT), также высокие места занимают такие модели как CNN \cite{CNN_top_2_SOTA}, GCDT \cite{Liu:19}, I-DARTS + Flair \cite{jiang-etal-2019-improved}, LSTM-CRF \cite{strakova-etal-2019-neural}.
+На текущий момент лучшими моделями на классическом датасете CoNLL 2003 \cite{tjong-kim-sang-de-meulder-2003-introduction} \ref{table:example_CoNLL}. По оценке сайта \href{https://paperswithcode.com/sota/named-entity-recognition-ner-on-conll-2003}{paperswithcode.com} является Delta \cite{delta} (модель на основе BERT), также высокие места занимают такие модели как CNN \cite{CNN_top_2_SOTA}, GCDT \cite{Liu:19}, I-DARTS + Flair \cite{jiang-etal-2019-improved}, LSTM-CRF \cite{strakova-etal-2019-neural}.
 
 \begin{table}[h]
 \caption{Пример предложения из датасета CoNLL}
@@ -24,7 +24,7 @@ Baghdad & NNP & I-NP & I-LOC \\
 \caption{Лучшие модели для задачи извлечения именованных сущностей на датасете CoNLL 2003}
 \end{figure}
 
-Для более глубокого погружения в тему рекомендуется ознакомится со всеми моделями, приведенными выше; я же проведу краткий обзор моделей, которые были использованы в работе.
+Для более глубокого погружения в тему рекомендуется ознакомиться со всеми моделями, приведенными выше; я же проведу краткий обзор моделей, которые были использованы в работе.
 
 \subsubsection{Low-Resource Named Entity Recognition with Cross-Lingual, Character-Level Neural Conditional Random Fields}
 
@@ -61,7 +61,7 @@ BERT --- это очень большая модель, которая не ре
 \begin{itemize}
 \item B префикс перед тегом указывает, что тег находится в начале сегмента (в нашем случае именованной сущности)
 \item I префикс перед тегом указывает, что тег находится в продолжении сегмента.
-\item O метка указывает, что данное слово не относится ни к какому сегмента. 
+\item O метка указывает, что данное слово не относится ни к какому тегу. 
 \end{itemize}
  
 Теги могут быть различными; устанавливаются на усмотрение исследователя, примеры тегов: PER (персона), LOC (географический объект), ORG (организация), TIM (время) и другие. Разметка в тексте выглядит следующим образом:
