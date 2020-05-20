@@ -1,153 +1,175 @@
 \begin{thebibliography}{10}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
-\else\language\csname l@#1\endcsname\fi}
-\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
-\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
-\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
-\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\hbox to.8em{--\hss--}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em\fi
+\cyrdash\hskip.2em\ignorespaces}
 
 \bibitem{first_NER}
-\selectlanguageifdefined{russian}
-Grishman~Ralph, Sundheim~Beth. Message Understanding Conference-6: A Brief
-  History~// Proceedings of the 16th Conference on Computational Linguistics -
-  Volume 1.
-\newblock COLING ’96.
-\newblock USA: Association for Computational Linguistics, 1996.
-\newblock {с.}~466–471. URL:  https://doi.org/10.3115/992628.992709.
+\selectlanguageifdefined{english}
+\BibEmph{Grishman~R., Sundheim~B.}
+  \href{http://dx.doi.org/10.3115/992628.992709}{Message understanding
+  conference-6: A brief history}~// Proceedings of the 16th Conference on
+  Computational Linguistics - Volume 1. \BibDash
+\newblock COLING ’96. \BibDash
+\newblock USA~: Association for Computational Linguistics, 1996. \BibDash
+\newblock P.~466–471. \BibDash
+\newblock URL: \BibUrl{https://doi.org/10.3115/992628.992709}.
 
 \bibitem{DBLP:journals/corr/abs-1812-09449}
-\selectlanguageifdefined{russian}
-A Survey on Deep Learning for Named Entity Recognition~/ Jing~Li, Aixin~Sun,
-  Jianglei~Han {[и~др.]}~// CoRR.
-\newblock 2018.
-\newblock Т. abs/1812.09449. URL:  http://arxiv.org/abs/1812.09449.
+\selectlanguageifdefined{english}
+A survey on deep learning for named entity recognition~/ Jing~Li, Aixin~Sun,
+  Jianglei~Han, Chenliang~Li~// \BibEmph{CoRR}. \BibDash
+\newblock 2018. \BibDash
+\newblock Vol. abs/1812.09449. \BibDash
+\newblock \href{http://arxiv.org/abs/1812.09449}{1812.09449}.
 
 \bibitem{Nevzorova}
-\selectlanguageifdefined{russian}
-Olga~Nevzorova~Damir~Mukhamedshin, Galieva~Alfiya. Named Entity Recognition in
-  Tatar: Corpus-Based Algorithm~// semanticscholar.
+\selectlanguageifdefined{english}
+\BibEmph{Olga~Nevzorova~D.~M., Galieva~A.} Named entity recognition in tatar:
+  Corpus-based algorithm~// \BibEmph{semanticscholar}. \BibDash
 \newblock 2018.
 
 \bibitem{tjong-kim-sang-de-meulder-2003-introduction}
-\selectlanguageifdefined{russian}
-Tjong Kim~Sang~Erik~F., De~Meulder~Fien. Introduction to the {C}o{NLL}-2003
-  Shared Task: Language-Independent Named Entity Recognition~// Proceedings of
-  the Seventh Conference on Natural Language Learning at {HLT}-{NAACL} 2003.
-\newblock 2003.
-\newblock {С.}~142--147. URL:  https://www.aclweb.org/anthology/W03-0419.
+\selectlanguageifdefined{english}
+\BibEmph{Tjong Kim~Sang~E.~F., De~Meulder~F.} Introduction to the
+  {C}o{NLL}-2003 shared task: Language-independent named entity recognition~//
+  Proceedings of the Seventh Conference on Natural Language Learning at
+  {HLT}-{NAACL} 2003. \BibDash
+\newblock 2003. \BibDash
+\newblock P.~142--147. \BibDash
+\newblock URL: \BibUrl{https://www.aclweb.org/anthology/W03-0419}.
 
 \bibitem{delta}
-\selectlanguageifdefined{russian}
+\selectlanguageifdefined{english}
 {DELTA: A DEep learning based Language Technology plAtform}~/ ~{Han}, ~Kun,
-  ~{Chen} {[и~др.]}~// arXiv e-prints.
-\newblock 2019. URL:  https://arxiv.org/abs/1908.01853.
+  ~{Chen} et~al.~// \BibEmph{arXiv e-prints}. \BibDash
+\newblock 2019. \BibDash
+\newblock URL: \BibUrl{https://arxiv.org/abs/1908.01853}.
 
 \bibitem{CNN_top_2_SOTA}
-\selectlanguageifdefined{russian}
+\selectlanguageifdefined{english}
 {Cloze-driven Pretraining of Self-attention Networks}~/ Alexei~Baevski,
-  Sergey~Edunov, Yinhan~Liu {[и~др.]}~// arXiv e-prints.
-\newblock 2019. URL:  https://arxiv.org/abs/1903.07785v1.
+  Sergey~Edunov, Yinhan~Liu et~al.~// \BibEmph{arXiv e-prints}. \BibDash
+\newblock 2019. \BibDash
+\newblock URL: \BibUrl{https://arxiv.org/abs/1903.07785v1}.
 
 \bibitem{Liu:19}
-\selectlanguageifdefined{russian}
-GCDT: A Global Context Enhanced Deep Transition Architecture for Sequence
-  Labeling~/ Yijin~Liu, Fandong~Meng, Jinchao~Zhang {[и~др.]}~// Proceedings
-  of the 57th Annual Meeting of the Association for Computational Linguistics.
+\selectlanguageifdefined{english}
+Gcdt: A global context enhanced deep transition architecture for sequence
+  labeling~/ Yijin~Liu, Fandong~Meng, Jinchao~Zhang et~al.~// Proceedings of
+  the 57th Annual Meeting of the Association for Computational Linguistics.
+  \BibDash
 \newblock 2019.
 
 \bibitem{jiang-etal-2019-improved}
-\selectlanguageifdefined{russian}
-Improved Differentiable Architecture Search for Language Modeling and Named
-  Entity Recognition~/ Yufan~Jiang, Chi~Hu, Tong~Xiao {[и~др.]}~//
-  Proceedings of the 2019 Conference on Empirical Methods in Natural Language
-  Processing and the 9th International Joint Conference on Natural Language
-  Processing (EMNLP-IJCNLP).
-\newblock Hong Kong, China: Association for Computational Linguistics, 2019.
-  nov.
-\newblock {С.}~3585--3590. URL:  https://www.aclweb.org/anthology/D19-1367.
+\selectlanguageifdefined{english}
+\href{http://dx.doi.org/10.18653/v1/D19-1367}{Improved differentiable
+  architecture search for language modeling and named entity recognition}~/
+  Yufan~Jiang, Chi~Hu, Tong~Xiao et~al.~// Proceedings of the 2019 Conference
+  on Empirical Methods in Natural Language Processing and the 9th International
+  Joint Conference on Natural Language Processing (EMNLP-IJCNLP). \BibDash
+\newblock Hong Kong, China~: Association for Computational Linguistics, 2019.
+  \BibDash nov. \BibDash
+\newblock P.~3585--3590. \BibDash
+\newblock URL: \BibUrl{https://www.aclweb.org/anthology/D19-1367}.
 
 \bibitem{strakova-etal-2019-neural}
-\selectlanguageifdefined{russian}
-Strakov{\'a}~Jana, Straka~Milan, Hajic~Jan. Neural Architectures for Nested
-  {NER} through Linearization~// Proceedings of the 57th Annual Meeting of the
-  Association for Computational Linguistics.
-\newblock Florence, Italy: Association for Computational Linguistics, 2019.
-  jul.
-\newblock {С.}~5326--5331. URL:  https://www.aclweb.org/anthology/P19-1527.
+\selectlanguageifdefined{english}
+\BibEmph{Strakov{\'a}~J., Straka~M., Hajic~J.}
+  \href{http://dx.doi.org/10.18653/v1/P19-1527}{Neural architectures for nested
+  {NER} through linearization}~// Proceedings of the 57th Annual Meeting of the
+  Association for Computational Linguistics. \BibDash
+\newblock Florence, Italy~: Association for Computational Linguistics, 2019.
+  \BibDash jul. \BibDash
+\newblock P.~5326--5331. \BibDash
+\newblock URL: \BibUrl{https://www.aclweb.org/anthology/P19-1527}.
 
 \bibitem{cotterell-duh-2017-low}
-\selectlanguageifdefined{russian}
-Cotterell~Ryan, Duh~Kevin. Low-Resource Named Entity Recognition with
-  Cross-lingual, Character-Level Neural Conditional Random Fields~//
+\selectlanguageifdefined{english}
+\BibEmph{Cotterell~R., Duh~K.} Low-resource named entity recognition with
+  cross-lingual, character-level neural conditional random fields~//
   Proceedings of the Eighth International Joint Conference on Natural Language
-  Processing (Volume 2: Short Papers).
-\newblock Taipei, Taiwan: Asian Federation of Natural Language Processing,
-  2017.  nov.
-\newblock {С.}~91--96. URL:  https://www.aclweb.org/anthology/I17-2016.
+  Processing (Volume 2: Short Papers). \BibDash
+\newblock Taipei, Taiwan~: Asian Federation of Natural Language Processing,
+  2017. \BibDash nov. \BibDash
+\newblock P.~91--96. \BibDash
+\newblock URL: \BibUrl{https://www.aclweb.org/anthology/I17-2016}.
 
 \bibitem{ju-etal-2018-neural}
-\selectlanguageifdefined{russian}
-Ju~Meizhi, Miwa~Makoto, Ananiadou~Sophia. A Neural Layered Model for Nested
-  Named Entity Recognition~// Proceedings of the 2018 Conference of the North
-  {A}merican Chapter of the Association for Computational Linguistics: Human
-  Language Technologies, Volume 1 (Long Papers).
-\newblock New Orleans, Louisiana: Association for Computational Linguistics,
-  2018.  jun.
-\newblock {С.}~1446--1459. URL:  https://www.aclweb.org/anthology/N18-1131.
+\selectlanguageifdefined{english}
+\BibEmph{Ju~M., Miwa~M., Ananiadou~S.}
+  \href{http://dx.doi.org/10.18653/v1/N18-1131}{A neural layered model for
+  nested named entity recognition}~// Proceedings of the 2018 Conference of the
+  North {A}merican Chapter of the Association for Computational Linguistics:
+  Human Language Technologies, Volume 1 (Long Papers). \BibDash
+\newblock New Orleans, Louisiana~: Association for Computational Linguistics,
+  2018. \BibDash jun. \BibDash
+\newblock P.~1446--1459. \BibDash
+\newblock URL: \BibUrl{https://www.aclweb.org/anthology/N18-1131}.
 
 \bibitem{DBLP:journals/corr/GreffSKSS15}
-\selectlanguageifdefined{russian}
-{LSTM:} {A} Search Space Odyssey~/ Klaus~Greff, Rupesh~Kumar~Srivastava,
-  Jan~Koutn{\'{\i}}k {[и~др.]}~// CoRR.
-\newblock 2015.
-\newblock Т. abs/1503.04069. URL:  http://arxiv.org/abs/1503.04069.
+\selectlanguageifdefined{english}
+{LSTM:} {A} search space odyssey~/ Klaus~Greff, Rupesh~Kumar~Srivastava,
+  Jan~Koutn{\'{\i}}k et~al.~// \BibEmph{CoRR}. \BibDash
+\newblock 2015. \BibDash
+\newblock Vol. abs/1503.04069. \BibDash
+\newblock \href{http://arxiv.org/abs/1503.04069}{1503.04069}.
 
 \bibitem{CRF}
-\selectlanguageifdefined{russian}
-Lafferty~John, Mccallum~Andrew, Pereira~Fernando. Conditional Random Fields:
-  Probabilistic Models for Segmenting and Labeling Sequence Data~// Proceedings
-  of the Eighteenth International Conference on Machine Learning.
-\newblock 2001.  01.
-\newblock {С.}~282--289.
+\selectlanguageifdefined{english}
+\BibEmph{Lafferty~J., Mccallum~A., Pereira~F.} Conditional random fields:
+  Probabilistic models for segmenting and labeling sequence data~// Proceedings
+  of the Eighteenth International Conference on Machine Learning. \BibDash
+\newblock 2001. \BibDash 01. \BibDash
+\newblock P.~282--289.
 
 \bibitem{DBLP:journals/corr/abs-1810-04805}
-\selectlanguageifdefined{russian}
-{BERT:} Pre-training of Deep Bidirectional Transformers for Language
-  Understanding~/ Jacob~Devlin, Ming{-}Wei~Chang, Kenton~Lee {[и~др.]}~//
-  CoRR.
-\newblock 2018.
-\newblock Т. abs/1810.04805. URL:  http://arxiv.org/abs/1810.04805.
+\selectlanguageifdefined{english}
+{BERT:} pre-training of deep bidirectional transformers for language
+  understanding~/ Jacob~Devlin, Ming{-}Wei~Chang, Kenton~Lee,
+  Kristina~Toutanova~// \BibEmph{CoRR}. \BibDash
+\newblock 2018. \BibDash
+\newblock Vol. abs/1810.04805. \BibDash
+\newblock \href{http://arxiv.org/abs/1810.04805}{1810.04805}.
 
 \bibitem{Wolf2019HuggingFacesTS}
-\selectlanguageifdefined{russian}
-HuggingFace's Transformers: State-of-the-art Natural Language Processing~/
-  Thomas~Wolf, Lysandre~Debut, Victor~Sanh {[и~др.]}~// ArXiv.
-\newblock 2019.
-\newblock Т. abs/1910.03771.
+\selectlanguageifdefined{english}
+Huggingface's transformers: State-of-the-art natural language processing~/
+  Thomas~Wolf, Lysandre~Debut, Victor~Sanh et~al.~// \BibEmph{ArXiv}. \BibDash
+\newblock 2019. \BibDash
+\newblock Vol. abs/1910.03771.
 
 \bibitem{DBLP:journals/corr/cmp-lg-9505040}
-\selectlanguageifdefined{russian}
-Ramshaw~Lance~A., Marcus~Mitchell~P. Text Chunking using Transformation-Based
-  Learning~// CoRR.
-\newblock 1995.
-\newblock Т. cmp-lg/9505040. URL:  http://arxiv.org/abs/cmp-lg/9505040.
+\selectlanguageifdefined{english}
+\BibEmph{Ramshaw~L.~A., Marcus~M.~P.} Text chunking using transformation-based
+  learning~// \BibEmph{CoRR}. \BibDash
+\newblock 1995. \BibDash
+\newblock Vol. cmp-lg/9505040. \BibDash
+\newblock URL: \BibUrl{http://arxiv.org/abs/cmp-lg/9505040}.
 
 \bibitem{marsh-perzanowski-1998-muc}
-\selectlanguageifdefined{russian}
-Marsh~Elaine, Perzanowski~Dennis. {MUC}-7 Evaluation of {IE} Technology:
-  Overview of Results~// Seventh Message Understanding Conference ({MUC}-7):
+\selectlanguageifdefined{english}
+\BibEmph{Marsh~E., Perzanowski~D.} {MUC}-7 evaluation of {IE} technology:
+  Overview of results~// Seventh Message Understanding Conference ({MUC}-7):
   Proceedings of a Conference Held in Fairfax, Virginia, {A}pril 29 - May 1,
-  1998.
-\newblock 1998. URL:  https://www.aclweb.org/anthology/M98-1002.
+  1998. \BibDash
+\newblock 1998. \BibDash
+\newblock URL: \BibUrl{https://www.aclweb.org/anthology/M98-1002}.
 
 \bibitem{tugan_tel}
-\selectlanguageifdefined{russian}
-Nevzorova~O.~Mukhamedshin~D., R.~Gataullin. Developing Corpus Management
-  System: Architecture of System and Database~// The Steering Committee of The
-  World Congress in Computer Science, Computer Engineering and Applied
-  Computing (WorldComp)~/ The Tatarstan Academy of Sciences, Kazan, Russia.
-\newblock 2017.
-\newblock {С.}~108--122.
+\selectlanguageifdefined{english}
+\BibEmph{Nevzorova~O.~M.~D., R.~G.} Developing corpus management system:
+  Architecture of system and database~// The Steering Committee of The World
+  Congress in Computer Science, Computer Engineering and Applied Computing
+  (WorldComp)~/ The Tatarstan Academy of Sciences, Kazan, Russia. \BibDash
+\newblock 2017. \BibDash
+\newblock P.~108--122.
 
 \end{thebibliography}

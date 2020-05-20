@@ -1,41 +1,42 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
-The style file: utf8gost705u.bst
+The style file: gost2008.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: biblio.bib
 You've used 18 entries,
-            2958 wiz_defined-function locations,
-            788 strings with 10479 characters,
-and the built_in function-call counts, 7026 in all, are:
-= -- 1062
+            3962 wiz_defined-function locations,
+            1224 strings with 14953 characters,
+and the built_in function-call counts, 7125 in all, are:
+= -- 869
 > -- 238
 < -- 23
 + -- 73
 - -- 55
-* -- 330
-:= -- 775
+* -- 441
+:= -- 766
 add.period$ -- 73
 call.type$ -- 18
-change.case$ -- 0
+change.case$ -- 18
 chr.to.int$ -- 0
 cite$ -- 18
-duplicate$ -- 292
-empty$ -- 611
+duplicate$ -- 361
+empty$ -- 748
 format.name$ -- 55
-if$ -- 1952
+if$ -- 1896
 int.to.chr$ -- 0
 int.to.str$ -- 18
 missing$ -- 0
-newline$ -- 114
+newline$ -- 131
 num.names$ -- 54
-pop$ -- 185
+pop$ -- 115
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 251
+skip$ -- 292
 stack$ -- 0
 substring$ -- 254
-swap$ -- 201
+swap$ -- 259
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
@@ -43,4 +44,4 @@ type$ -- 0
 warning$ -- 0
 while$ -- 39
 width$ -- 20
-write$ -- 309
+write$ -- 285
