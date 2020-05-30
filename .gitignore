@@ -3,7 +3,6 @@ BiLSTMCRF⁩/layered-bilstm-crf⁩/result/*
 
 *.data
 *.log
-*.txt
 *.bin
 *.zip
 *.bin
