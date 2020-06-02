@@ -1,10 +1,3 @@
 # NER_in_Tatar
 
-How to run BERT:
-
-1. Download folder https://github.com/ksemiya/NER_in_Tatar/tree/master/BERT
-2. Run ksemiya_create_env.sh
-3. Run ksemiya_proccessing_data.sh
-4. Run ksemiya_script_bert.sh
-5. Wish yourself luck
-6. It should work.
+LOC, PER, ORG, MISC -- folders with \*.txt files. A name of .txt is a word which was a base to [O.Nevzorova algorithm](https://www.semanticscholar.org/paper/Named-Entity-Recognition-in-Tatar-%3A-Corpus-Based-Nevzorova-Mukhamedshin/3fbf3145a9ddaaa7a98e5be909e587620f39d452). All n-grams with one tags contains in LOC.txt, ORG.txt, MISC.txt, PER.txt
